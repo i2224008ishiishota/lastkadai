@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css?family=PT+Sans+Narrow");
+@import url("https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500,700,800,900");
+
+html,
+body,
+div,
+span,
+a,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block
+}
+
+body {
+  line-height: 1
+}
+
+ul,
+ol {
+  list-style: none
+}
+
+blockquote,
+q {
+  quotes: none
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: ''
+}
+
+del {
+  text-decoration: line-through
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 0;
+  padding: 0
+}
+
+img {
+  vertical-align: bottom
+}
+
+input,
+select {
+  vertical-align: middle
+}
+
+input:focus,
+textarea:focus {
+  outline: 0
+}
+
+input[type='search']::-webkit-search-decoration,
+input[type='search']::-webkit-search-cancel-button,
+input[type='search']::-webkit-search-results-button,
+input[type='search']::-webkit-search-results-decoration {
+  display: none
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+@font-face {
+  font-family: reitam;
+  src: url("../webfonts/Reitam Regular.otf") format("opentype")
+}
+
+@font-face {
+  font-family: NotoSans Regular;
+  src: url("../webfonts/NotoSans-Regular.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: NotoSans Bold;
+  src: url("../webfonts/NotoSans-Bold.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: NotoSans SemiBpld;
+  src: url("../webfonts/NotoSans-SemiBold.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: NotoSans Medium;
+  src: url("../webfonts/NotoSans-Medium.ttf") format("truetype")
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box
+}
+
+html {
+  font-family: "reitam", 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-size: 12px;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0
+}
+
+body {
+  background-image: url("image/web,project,background.png");
+
+  /* 背景画像を繰り返し表示しないようにします */
+  background-repeat: no-repeat;
+
+  /* 背景画像を画面全体に広げるために以下の設定が必要です */
+  background-size: cover;
+
+  /* 背景を固定するためのプロパティを追加します */
+  background-attachment: fixed;
+
+  /* 背景画像の透明度を設定します */
+  /* 0に近い値であるほど画像が薄くなります（0.0が完全に透明、1.0が不透明） */
+  background-color: rgba(207, 255, 245, 0.5);
+  ba
+}
+
+
+a {
+  color: #c51162;
+  text-decoration: none;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease
+}
+
+a:hover {
+  color: #ff4081;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .7
+}
+
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none !important
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sp {
+    display: none !important
+  }
+}
+
+
+
+
+.fadein {
+  opacity: 0;
+  -webkit-transform: translate(0, 1.4vw);
+  -ms-transform: translate(0, 1.4vw);
+  transform: translate(0, 1.4vw);
+  -webkit-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s
+}
+
+.fadein.scrollin {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0)
+}
+
+@-webkit-keyframes load7 {
+
+  0%,
+  80%,
+  100% {
+    -webkit-box-shadow: 0 2em 0 -1.3em;
+    box-shadow: 0 2em 0 -1.3em
+  }
+
+  40% {
+    -webkit-box-shadow: 0 2em 0 0;
+    box-shadow: 0 2em 0 0
+  }
+}
+
+@keyframes load7 {
+
+  0%,
+  80%,
+  100% {
+    -webkit-box-shadow: 0 2em 0 -1.3em;
+    box-shadow: 0 2em 0 -1.3em
+  }
+
+  40% {
+    -webkit-box-shadow: 0 2em 0 0;
+    box-shadow: 0 2em 0 0
+  }
+}
+
+.header {
+  width: 100vw;
+  height: auto;
+  padding: 2.9vw 0 0 2.5vw;
+  position: fixed;
+  top: 0;
+  z-index: 100
+}
+
+
+
+.header_inner_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 5.5vw;
+  line-height: 4.5vw
+}
+
+.header_inner_listItem {
+  margin-left: 2.75vw
+}
+
+.header_inner_listItem a {
+  font-size: 1.4vw;
+  color: #00a0fd;
+  letter-spacing: .1em
+}
+
+.header_logo img {
+  width: 4.5vw;
+  height: 4.5vw
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    padding: 4vw 5vw 0
+  }
+
+  .header_inner_listItem {
+    margin-left: 5.3vw
+  }
+
+  .header_inner_listItem a {
+    font-size: 20px;
+    line-height: 10.5vw
+  }
+
+  .header_logo img {
+    width: 10.5vw;
+    height: 10.5vw
+  }
+}
+
+.footer {
+  width: 100vw;
+  height: 20vw;
+  display: block;
+  background-color: #191919;
+  position: relative
+}
+
+.footer_inner {
+  height: 100%
+}
+
+.footer_inner_copy {
+  color: #e5e5de;
+  font-size: 1.3vw;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-weight: bold;
+  letter-spacing: .5em;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%)
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 53vw
+  }
+
+  .footer_inner_copy {
+    width: 100vw;
+    text-align: center;
+    font-size: 2.7vw
+  }
+}
+
+.wrapper--top {
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 35%
+}
+
+
+
+.wrapper--top .mainVisual {
+  width: 100vw;
+  height: 100vh
+}
+
+.wrapper--top .mainVisual_inner {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: nowrap
+}
+
+.wrapper--top .mainVisual_name,
+.wrapper--top .mainVisual_sentence {
+  text-align: center
+}
+
+.wrapper--top .mainVisual_name {
+  letter-spacing: .2em;
+  font-size: 70px;
+}
+
+
+.grid {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: large;
+  text-align: center;
+  display: grid;
+  gap: 26px;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 6%;
+  margin-bottom: 50px;
+}
+
+
+
+
+
+
+.wrapper--top .main_works_listItem_textblock {
+  padding: 1.4vw 0 0 1em
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper--top {
+    background: none
+  }
+
+  .wrapper--top .mainVisual_inner {
+    -webkit-transform: translate(-50%, -120%);
+    -ms-transform: translate(-50%, -120%);
+    transform: translate(-50%, -120%)
+  }
+
+  .wrapper--top .mainVisual_logo {
+    font-size: 6.4vw
+  }
+
+  .wrapper--top .mainVisual_sentence img {
+    width: 75vw;
+    height: inherit;
+    margin-top: 6.5vw
+  }
+
+  .wrapper--top .mainVisual_bg {
+    width: 62vw;
+    position: fixed;
+    left: 50%;
+    -webkit-transform: translate(-50%, -75%);
+    -ms-transform: translate(-50%, -75%);
+    transform: translate(-50%, -75%);
+    z-index: -1
+  }
+
+  .wrapper--top .main_works_list {
+    width: 90vw;
+    margin-bottom: 13vw
+  }
+
+  .wrapper--top .main_works_listItem {
+    padding-bottom: 13vw
+  }
+
+  .wrapper--top .main_works_listItem_eyecatch {
+    width: 100%
+  }
+
+  .wrapper--top .main_works_listItem_textblock {
+    margin-top: 4vw;
+    padding-left: 2.7vw
+  }
+
+  .wrapper--top .main_works_title {
+    font-size: 3.2vw
+  }
+
+  .wrapper--top .main_works_category {
+    font-size: 2.3vw;
+    padding-top: 3.3vw
+  }
+}
